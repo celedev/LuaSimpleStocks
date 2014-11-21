@@ -25,10 +25,17 @@
 			<key>sourceTree</key>
 			<string>&lt;absolute&gt;</string>
 		</dict>
-		<key>20727A61AFB64C3F97D13F31</key>
+		<key>1A791FA20F924D47AA44F569</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5F882FA06D124DEA83FC6728</string>
+			<string>EFB4153D79854212A8B795CF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>34AD9015CFF54C379F5ED273</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A08D5F43A91F4587BA2DAAD1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -39,7 +46,7 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>5F882FA06D124DEA83FC6728</key>
+		<key>47FB134CB13C408E9C2315EF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -48,9 +55,9 @@
 			<key>lastKnownFileType</key>
 			<string>archive.ar</string>
 			<key>name</key>
-			<string>libCIMLuaBindingUIKit.a</string>
+			<string>libCIMLuaBindingFoundation.a</string>
 			<key>path</key>
-			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.0-SDK.luabindings/BindingLibs/libCIMLuaBindingUIKit.a</string>
+			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/BindingLibs/libCIMLuaBindingFoundation.a</string>
 			<key>sourceTree</key>
 			<string>&lt;absolute&gt;</string>
 		</dict>
@@ -61,24 +68,10 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>72224AC53A304CC7B14A3974</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E83455001D954618A54420A0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>7E32940E742C4654B2CB66CE</key>
 		<dict>
 			<key>fileRef</key>
 			<string>A06A42FB7210409081E40D81</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98D6B9596ADA40449D7709A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DA35A913912843A6B04FBA14</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -95,7 +88,7 @@
 			<key>sourceTree</key>
 			<string>SDKROOT</string>
 		</dict>
-		<key>DA35A913912843A6B04FBA14</key>
+		<key>A08D5F43A91F4587BA2DAAD1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -104,9 +97,9 @@
 			<key>lastKnownFileType</key>
 			<string>archive.ar</string>
 			<key>name</key>
-			<string>libCIMLuaBindingCoreGraphics.a</string>
+			<string>libCIMLuaBindingUIKit.a</string>
 			<key>path</key>
-			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.0-SDK.luabindings/BindingLibs/libCIMLuaBindingCoreGraphics.a</string>
+			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/BindingLibs/libCIMLuaBindingUIKit.a</string>
 			<key>sourceTree</key>
 			<string>&lt;absolute&gt;</string>
 		</dict>
@@ -125,7 +118,14 @@
 			<key>sourceTree</key>
 			<string>&lt;absolute&gt;</string>
 		</dict>
-		<key>E83455001D954618A54420A0</key>
+		<key>E36DED0F05BC4D30B86D9F23</key>
+		<dict>
+			<key>fileRef</key>
+			<string>47FB134CB13C408E9C2315EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFB4153D79854212A8B795CF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -134,9 +134,9 @@
 			<key>lastKnownFileType</key>
 			<string>archive.ar</string>
 			<key>name</key>
-			<string>libCIMLuaBindingFoundation.a</string>
+			<string>libCIMLuaBindingCoreGraphics.a</string>
 			<key>path</key>
-			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.0-SDK.luabindings/BindingLibs/libCIMLuaBindingFoundation.a</string>
+			<string>/Users/jean-luc/Library/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/BindingLibs/libCIMLuaBindingCoreGraphics.a</string>
 			<key>sourceTree</key>
 			<string>&lt;absolute&gt;</string>
 		</dict>
@@ -233,9 +233,9 @@
 				<string>7E32940E742C4654B2CB66CE</string>
 				<string>6A6BA377D156480CAEDEF9C6</string>
 				<string>3A4EF2DAFD3149D29F63B131</string>
-				<string>20727A61AFB64C3F97D13F31</string>
-				<string>98D6B9596ADA40449D7709A5</string>
-				<string>72224AC53A304CC7B14A3974</string>
+				<string>34AD9015CFF54C379F5ED273</string>
+				<string>E36DED0F05BC4D30B86D9F23</string>
+				<string>1A791FA20F924D47AA44F569</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -275,7 +275,7 @@
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>SImpleStocks</string>
+			<string>SimpleStocks</string>
 			<key>productName</key>
 			<string>SImpleStocks</string>
 			<key>productReference</key>
@@ -292,7 +292,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>SImpleStocks.app</string>
+			<string>SimpleStocks.app</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
@@ -319,9 +319,9 @@
 				<string>A06A42FB7210409081E40D81</string>
 				<string>0B669263FE1A4168B27B8304</string>
 				<string>DCD3D97CFA9E48C88529C77A</string>
-				<string>5F882FA06D124DEA83FC6728</string>
-				<string>DA35A913912843A6B04FBA14</string>
-				<string>E83455001D954618A54420A0</string>
+				<string>A08D5F43A91F4587BA2DAAD1</string>
+				<string>47FB134CB13C408E9C2315EF</string>
+				<string>EFB4153D79854212A8B795CF</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -431,7 +431,7 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>SImpleStocks-Info.plist</string>
+			<string>SimpleStocks-Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -493,7 +493,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>SImpleStocks-Prefix.pch</string>
+			<string>SimpleStocks-Prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -681,15 +681,15 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>SImpleStocks/SImpleStocks-Prefix.pch</string>
+				<string>SimpleStocks/SimpleStocks-Prefix.pch</string>
 				<key>HEADER_SEARCH_PATHS</key>
 				<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/include"</string>
 				<key>INFOPLIST_FILE</key>
-				<string>SImpleStocks/SImpleStocks-Info.plist</string>
+				<string>SimpleStocks/SimpleStocks-Info.plist</string>
 				<key>LIBRARY_SEARCH_PATHS</key>
 				<array>
 					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos"</string>
-					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.0-SDK.luabindings/BindingLibs"</string>
+					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/BindingLibs"</string>
 				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string>-ObjC</string>
@@ -710,15 +710,15 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>SImpleStocks/SImpleStocks-Prefix.pch</string>
+				<string>SimpleStocks/SimpleStocks-Prefix.pch</string>
 				<key>HEADER_SEARCH_PATHS</key>
 				<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/include"</string>
 				<key>INFOPLIST_FILE</key>
-				<string>SImpleStocks/SImpleStocks-Info.plist</string>
+				<string>SimpleStocks/SimpleStocks-Info.plist</string>
 				<key>LIBRARY_SEARCH_PATHS</key>
 				<array>
 					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos"</string>
-					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.0-SDK.luabindings/BindingLibs"</string>
+					<string>"$(USER_LIBRARY_DIR)/Application Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/BindingLibs"</string>
 				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string>-ObjC</string>
