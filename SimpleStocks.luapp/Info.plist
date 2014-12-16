@@ -5,51 +5,16 @@
 	<key>Program Bindings Libs</key>
 	<array>
 		<dict>
-			<key>LibBookmark</key>
-			<data>
-			Ym9va0AEAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAPAMAAAUAAAABAQAAVXNlcnMAAAAIAAAAAQEAAGpl
-			YW4tbHVjBwAAAAEBAABMaWJyYXJ5ABMAAAABAQAAQXBwbGljYXRp
-			b24gU3VwcG9ydAAUAAAAAQEAAGNvbS5jZWxlZGV2LkNvZGVGbG93
-			CAAAAAEBAABpcGhvbmVvcxcAAAABAQAAaU9TLTguMS1TREsubHVh
-			YmluZGluZ3MAHAAAAAEGAAAEAAAAFAAAACQAAAA0AAAAUAAAAGwA
-			AAB8AAAACAAAAAQDAAB8ZAIAAAAAAAgAAAAEAwAAw3tOAAAAAAAI
-			AAAABAMAADh8TgAAAAAACAAAAAQDAAA+fE4AAAAAAAgAAAAEAwAA
-			WmJUAAAAAAAIAAAABAMAAFxiVAAAAAAACAAAAAQDAACevcgAAAAA
-			ABwAAAABBgAAwAAAANAAAADgAAAA8AAAAAABAAAQAQAAIAEAAAgA
-			AAAABAAAQboegwcAAAAYAAAAAQIAAAIAAAAAAAAADwAAAAAAAAAA
-			AAAAAAAAAAgAAAAEAwAABQAAAAAAAAAEAAAAAwMAAPcBAAAMAAAA
-			AQEAAE1hY2ludG9zaCBIRAgAAAAEAwAAAAAGzgMBAAAIAAAAAAQA
-			AEG4Iv/AAAAAJAAAAAEBAAAxQkIzNEI4QS03RjU5LTNDMjktOUJB
-			OS0yMTNBRTg0OTM4NkUYAAAAAQIAAIEAAAABAAgA7xcAAAEACAAA
-			AAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAABAAAAAMDAAAAAwAA
-			8gAAAAECAAA3ZGNlODAzNjdiZGY0OGRlZWU3YWQwOTE5NDNmMGM2
-			ZTY4ODBlOGE0OzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAwMDAwMDAw
-			MDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJlYWQtd3JpdGU7
-			MDAwMDAwMDE7MDEwMDAwMDg7MDAwMDAwMDAwMGM4YmQ5ZTsvdXNl
-			cnMvamVhbi1sdWMvbGlicmFyeS9hcHBsaWNhdGlvbiBzdXBwb3J0
-			L2NvbS5jZWxlZGV2LmNvZGVmbG93L2lwaG9uZW9zL2lvcy04LjEt
-			c2RrLmx1YWJpbmRpbmdzAAAAzAAAAP7///8BAAAAAAAAABAAAAAE
-			EAAAnAAAAAAAAAAFEAAAMAEAAAAAAAAQEAAAZAEAAAAAAABAEAAA
-			VAEAAAAAAAACIAAAIAIAAAAAAAAQIAAAoAEAAAAAAAARIAAA1AEA
-			AAAAAAASIAAAtAEAAAAAAAATIAAAxAEAAAAAAAAgIAAAAAIAAAAA
-			AAAwIAAALAIAAAAAAAABwAAAhAEAAAAAAAARwAAAFAAAAAAAAAAS
-			wAAAlAEAAAAAAAAQ0AAANAIAAAAAAACA8AAAQAIAAAAAAAA=
-			</data>
-			<key>LibDirPath</key>
-			<string>iphoneos</string>
 			<key>LibId</key>
 			<string>apple_sdk_iphoneos8.1</string>
 			<key>LibName</key>
 			<string>iOS</string>
-			<key>LibUrl</key>
-			<string>file:///Users/jean-luc/Library/Application%20Support/com.celedev.CodeFlow/iphoneos/iOS-8.1-SDK.luabindings/</string>
 		</dict>
 	</array>
 	<key>Program Display Info</key>
 	<dict>
 		<key>LuaAppDocument remote Lua service</key>
-		<string>SImpleStocks - Context (iPad Celedev 1)</string>
+		<string>SimpleStocks - Context (Astérie)</string>
 		<key>LuaAppDocument-associatedXodeProject</key>
 		<dict>
 			<key>platform</key>
@@ -60,9 +25,9 @@
 			<string>SimpleStocks</string>
 		</dict>
 		<key>LuaAppWindow edited source path</key>
-		<string>StockTradeInfo</string>
+		<string>SimpleStockView</string>
 		<key>LuaAppWindow frame</key>
-		<string>997 587 1440 751 0 0 2560 1418 </string>
+		<string>1110 390 1440 751 0 0 2560 1417 </string>
 	</dict>
 	<key>Program Format Version</key>
 	<string>0.9</string>
@@ -78,6 +43,8 @@
 			<string>Beach</string>
 		</array>
 	</dict>
+	<key>Program Platform Sdk Name</key>
+	<string>iphoneos</string>
 	<key>Program Source Files Info</key>
 	<dict>
 		<key></key>
@@ -148,17 +115,17 @@
 			<key>Source File Name</key>
 			<string>SimpleStockView</string>
 			<key>SourceItemChangeTime</key>
-			<real>422370306.26843101</real>
+			<real>440437955.70731598</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>0</integer>
+				<integer>15729</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1333</integer>
+				<integer>853</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>0</integer>
+				<integer>252</integer>
 			</dict>
 		</dict>
 		<key>StockTradeInfo</key>
@@ -178,9 +145,9 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>1907</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>2701</integer>
+				<integer>2493</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>4321</integer>
+				<integer>3750</integer>
 			</dict>
 		</dict>
 		<key>StockViewController</key>
@@ -200,7 +167,7 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>0</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1042</integer>
+				<integer>900</integer>
 				<key>SrcEditor Visible Location</key>
 				<integer>0</integer>
 			</dict>

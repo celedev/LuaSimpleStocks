@@ -1,4 +1,3 @@
-local CgGeometry = require 'CoreGraphics.CGGeometry'
 local CgContext = require 'CoreGraphics.CGContext'
 local CgPath = require 'CoreGraphics.CGPath'
 local CgGradient = require 'CoreGraphics.CGGradient'
@@ -10,6 +9,7 @@ require 'StockTradeInfo'
 local UIView = objc.UIView
 local UIColor = objc.UIColor
 local whiteColor = UIColor.whiteColor
+local CGRect = struct.CGRect
 
 local floor = math.floor
 
@@ -21,9 +21,9 @@ function SimpleStockView:topClipPathFromDataInRect (rect)
     
     local path = UIBezierPath:bezierPath()
     path:appendPath (self:pathForPriceDataInRect(rect))
-    local rectMaxX = CgGeometry.CGRectGetMaxX(rect)
-    local rectMinX = CgGeometry.CGRectGetMinX(rect)
-    local rectMinY = CgGeometry.CGRectGetMinY(rect)
+    local rectMaxX = rect:getMaxX()
+    local rectMinX = rect:getMinX()
+    local rectMinY = rect:getMinY()
     path:addLineToPoint { x = rectMaxX, y = path.currentPoint.y }
     path:addLineToPoint { x = rectMaxX, y = rectMinY }
     path:addLineToPoint { x = rectMinX, y = rectMinY }
@@ -38,9 +38,9 @@ function SimpleStockView:bottomClipPathFromDataInRect (rect)
     
     local path = UIBezierPath:bezierPath()
     path:appendPath (self:pathForPriceDataInRect(rect))
-    local rectMaxX = CgGeometry.CGRectGetMaxX(rect)
-    local rectMinX = CgGeometry.CGRectGetMinX(rect)
-    local rectMaxY = CgGeometry.CGRectGetMaxY(rect)
+    local rectMaxX = rect:getMaxX()
+    local rectMinX = rect:getMinX()
+    local rectMaxY = rect:getMaxY()
     path:addLineToPoint { x = rectMaxX, y = path.currentPoint.y }
     path:addLineToPoint { x = rectMaxX, y = rectMaxY }
     path:addLineToPoint { x = rectMinX, y = rectMaxY }
@@ -52,7 +52,7 @@ function SimpleStockView:bottomClipPathFromDataInRect (rect)
 end
 
 -- Draw closing data
-local priceLineWidth = 5.0
+local priceLineWidth = 4.0
 
 --The path for the closing data, this is used to draw the graph, and as part of the top and bottom clip paths
 function SimpleStockView:pathForPriceDataInRect(rect)
@@ -66,10 +66,10 @@ function SimpleStockView:pathForPriceDataInRect(rect)
     path:setLineJoinStyle(CgPath.CGLineJoin.Round)
     path:setLineCapStyle(CgPath.CGLineCap.Round)
     
-    rect = CgGeometry.CGRectInset(rect, priceLineWidth / 2, priceLineWidth) -- Inset so the path does not ever go beyond the frame of the graph.
+    rect = rect:inset(priceLineWidth / 2, priceLineWidth) -- Inset so the path does not ever go beyond the frame of the graph.
     
-    local rectMinX = CgGeometry.CGRectGetMinX(rect)
-    local rectMaxY = CgGeometry.CGRectGetMaxY(rect)
+    local rectMinX = rect:getMinX()
+    local rectMaxY = rect:getMaxY()
     local horizontalSpacing = rect.size.width / tradingDays
     local verticalScale = rect.size.height / (maxClosePrice - minClosePrice)
 
@@ -83,7 +83,7 @@ function SimpleStockView:pathForPriceDataInRect(rect)
     end
     
     closingPrice = self.dataSource:dailyTradeInfoWithIndex(tradingDays).closingPrice
-    path:addLineToPoint { x = CgGeometry.CGRectGetMaxX(rect), y = rectMaxY - (closingPrice - minClosePrice) * verticalScale }
+    path:addLineToPoint { x = rect:getMaxX(), y = rectMaxY - (closingPrice - minClosePrice) * verticalScale }
     
     return path;
 end
@@ -111,10 +111,10 @@ function SimpleStockView:drawLinePatterUnderPriceData(rect, shouldCLip)
     local alphaMax = 0.8
     local alphaMin = 0.1
     
-    local rectMinX = CgGeometry.CGRectGetMinX(rect)
-    local rectMaxX = CgGeometry.CGRectGetMaxX(rect)
-    local rectMinY = CgGeometry.CGRectGetMinY(rect)
-    local rectMaxY = CgGeometry.CGRectGetMaxY(rect)
+    local rectMinX = rect:getMinX()
+    local rectMaxX = rect:getMaxX()
+    local rectMinY = rect:getMinY()
+    local rectMaxY = rect:getMaxY()
 
     local path = UIBezierPath:bezierPath()
     path:setLineWidth(underPricePatternLineWidth)
@@ -223,16 +223,12 @@ function SimpleStockView:drawHorizontalGridInRect (rect)
     local clipPath = self:topClipPathFromDataInRect(rect)
     clipPath:addClip()
     
-    local rectMinX = CgGeometry.CGRectGetMinX(rect)
-    local rectMaxX = CgGeometry.CGRectGetMaxX(rect)
-    local rectMinY = CgGeometry.CGRectGetMinY(rect)
-
     local gridLines = 5
     
     local path = UIBezierPath:bezierPath()
     path:setLineWidth (1.0)
-    path:moveToPoint { x =  rectMinX, y = floor(rectMinY + 0.5) }
-    path:addLineToPoint {x =  rectMaxX, y = floor(rectMinY + 0.5) }
+    path:moveToPoint { x =  rect:getMinX(), y = floor(rect:getMinY() + 0.5) }
+    path:addLineToPoint {x =  rect:getMaxX(), y = floor(rect:getMinY() + 0.5) }
     path:setLineDash_count_phase ({5.0, 5.0}, 2, 0.0)
     gridColor:setStroke()
     
@@ -251,14 +247,12 @@ function SimpleStockView:drawVerticalGridInRect (pricesRect, volumeRectHeight)
     local dataCount = self.dataSource.tradingDaysCount
     local monthlyTradeInfo = self.dataSource.monthlyTradeInfo
 
-    local rectMinX = CgGeometry.CGRectGetMinX(pricesRect)
-    local rectMinY = CgGeometry.CGRectGetMinY(pricesRect)
-    local rectMaxY = CgGeometry.CGRectGetMaxY(pricesRect)
+    local rectMinX = pricesRect:getMinX()
     
     local gridLine = UIBezierPath:bezierPath()
     gridLine:setLineWidth (2.0)
-    gridLine:moveToPoint { x =  rectMinX, y = rectMinY  }
-    gridLine:addLineToPoint {x =  rectMinX, y = rectMaxY + volumeRectHeight }
+    gridLine:moveToPoint    { x = rectMinX, y = pricesRect:getMinY()  }
+    gridLine:addLineToPoint { x = rectMinX, y = pricesRect:getMaxY() + volumeRectHeight }
     
     gridColor:setStroke()
     gridLine:stroke()
@@ -278,7 +272,7 @@ function SimpleStockView:drawVerticalGridInRect (pricesRect, volumeRectHeight)
     
     -- Stroke last vertical line
     CgContext.SaveGState(ctx)
-    CgContext.TranslateCTM (ctx, CgGeometry.CGRectGetMaxX(pricesRect), 0.0)
+    CgContext.TranslateCTM (ctx, pricesRect:getMaxX(), 0.0)
     gridLine:stroke()
     CgContext.RestoreGState(ctx)
 end
@@ -305,8 +299,8 @@ function SimpleStockView:drawVolumeDataInRect(volumeRect)
     local minVolume = self.dataSource.minDailyVolume
     local maxVolume = self.dataSource.maxDailyVolume
     
-    local rectMinX = CgGeometry.CGRectGetMinX(volumeRect)
-    local rectMaxY = CgGeometry.CGRectGetMaxY(volumeRect)
+    local rectMinX = volumeRect:getMinX()
+    local rectMaxY = volumeRect:getMaxY()
     local horizontalSpacing = volumeRect.size.width / tradingDays
     local verticalScale = volumeRect.size.height / (maxVolume - minVolume)
     
@@ -368,7 +362,7 @@ function SimpleStockView:drawMonthNamesTextUnderVolumeRect(volumeRect, monthName
         local monthName = dateFormatter:stringFromDate(date)
         local monthSize = monthName:sizeWithFont(monthNameFont)
         if monthSize.width <= monthGraphWidth then
-            local monthRect = CgGeometry.CGRectMake(0.0--[[ (monthGraphWidth - monthSize.width) / 2]], CgGeometry.CGRectGetMaxY(volumeRect), monthSize.width, monthSize.height)
+            local monthRect = CGRect(0.0--[[ (monthGraphWidth - monthSize.width) / 2]], volumeRect:getMaxY(), monthSize.width, monthSize.height)
             monthName:drawInRect_withFont(monthRect, monthNameFont)
         end
     end
@@ -380,20 +374,25 @@ local graphMargin = 0
 local volumeGraphicTopMargin = 15
 local volumeGraphicHeightRatio = 0.15
 local artPatternCellsHCount = 9
+
+function CGRect:translate (dx, dy)
+    self.origin.x = self.origin.x + dx
+    self.origin.y = self.origin.y + dy
+end
     
 function SimpleStockView:drawRect (rect)
     
     local bounds = self.bounds
-    bounds = CgGeometry.CGRectInset (bounds, graphMargin, graphMargin)
+    bounds = bounds:inset (graphMargin, graphMargin)
     
     local topReservedHeight = 0.08 * bounds.size.height
     local volumeGraphicHeight = volumeGraphicHeightRatio * bounds.size.height
     local monthNameFontSize = math.max (0.20 * volumeGraphicHeight, 17)
     
-    local pricesRect = CgGeometry.CGRectMake (bounds.origin.x, bounds.origin.y + topReservedHeight, bounds.size.width, 
-                                              bounds.size.height - (topReservedHeight + volumeGraphicTopMargin + volumeGraphicHeight + monthNameFontSize * 1.5))
-    local volumeRect = CgGeometry.CGRectMake (CgGeometry.CGRectGetMinX(pricesRect), CgGeometry.CGRectGetMaxY(pricesRect) + volumeGraphicTopMargin,
-                                              pricesRect.size.width, volumeGraphicHeight)
+    local pricesRect = CGRect (bounds.origin.x, bounds.origin.y + topReservedHeight, bounds.size.width, 
+                               bounds.size.height - (topReservedHeight + volumeGraphicTopMargin + volumeGraphicHeight + monthNameFontSize * 1.5))
+    local volumeRect = CGRect (pricesRect:getMinX(), pricesRect:getMaxY() + volumeGraphicTopMargin,
+                               pricesRect.size.width, volumeGraphicHeight)
     
     -- Background and grid
     self:drawBackgroundGradient ()
