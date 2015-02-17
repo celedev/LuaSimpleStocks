@@ -13,8 +13,6 @@
 	</array>
 	<key>Program Display Info</key>
 	<dict>
-		<key>LuaAppDocument remote Lua service</key>
-		<string>SimpleStocks - Context (Astérie)</string>
 		<key>LuaAppDocument-associatedXodeProject</key>
 		<dict>
 			<key>platform</key>
@@ -27,7 +25,7 @@
 		<key>LuaAppWindow edited source path</key>
 		<string>SimpleStockView</string>
 		<key>LuaAppWindow frame</key>
-		<string>1110 390 1440 751 0 0 2560 1417 </string>
+		<string>30 444 1440 751 0 0 2560 1417 </string>
 	</dict>
 	<key>Program Format Version</key>
 	<string>0.9</string>
@@ -93,17 +91,17 @@
 			<key>Source File Name</key>
 			<string>SampleStockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
-			<real>422370118.64574599</real>
+			<real>445855865.66095603</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>7374</integer>
+				<integer>8369</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1762</integer>
+				<integer>1680</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>6835</integer>
+				<integer>6718</integer>
 			</dict>
 		</dict>
 		<key>SimpleStockView</key>
@@ -115,17 +113,17 @@
 			<key>Source File Name</key>
 			<string>SimpleStockView</string>
 			<key>SourceItemChangeTime</key>
-			<real>440437955.70731598</real>
+			<real>445855978.04360998</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>15729</integer>
+				<integer>15345</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>853</integer>
+				<integer>1680</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>252</integer>
+				<integer>14365</integer>
 			</dict>
 		</dict>
 		<key>StockTradeInfo</key>
@@ -137,17 +135,17 @@
 			<key>Source File Name</key>
 			<string>StockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
-			<real>433371819.63585001</real>
+			<real>445855815.82538402</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>1907</integer>
+				<integer>515</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>2493</integer>
+				<integer>1308</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>3750</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>StockViewController</key>
@@ -167,7 +165,7 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>0</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>900</integer>
+				<integer>1042</integer>
 				<key>SrcEditor Visible Location</key>
 				<integer>0</integer>
 			</dict>

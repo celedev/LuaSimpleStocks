@@ -14,7 +14,6 @@ local StockTradeInfo = class.createClass ('StockTradeInfo')
 
 function StockTradeInfo:init()
     self._dailyTradeInfo = {} -- Sorted-by-date array of StockDailyTradeInfo
-    return self
 end
 
 function StockTradeInfo:dailyTradeInfoCount()

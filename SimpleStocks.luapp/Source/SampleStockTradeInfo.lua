@@ -84,47 +84,44 @@ local SampleStockTradeInfo = class.createClass ('SampleStockTradeInfo', StockTra
 
 function SampleStockTradeInfo:init()
     
-    self = self[StockTradeInfo]:init () -- call super
+    self[StockTradeInfo]:init () -- call super
     
-    if self ~= nil then
-        local sampleLocale = objc.NSLocale:newWithIdentifier ("en_US_POSIX")
+    local sampleLocale = objc.NSLocale:newWithIdentifier ("en_US_POSIX")
+    
+    local dateFormatter = objc.NSDateFormatter:new()
+    dateFormatter:setLocale(sampleLocale)
+    dateFormatter:setDateFormat("MMM d, yyyy")
+    
+    local priceFormatter = objc.NSNumberFormatter:new()
+    priceFormatter:setLocale(sampleLocale)
+    priceFormatter:setNumberStyle(NSNumberFormatter.Style.DecimalStyle)
+    
+    local volumeFormatter= objc.NSNumberFormatter:new()
+    volumeFormatter:setLocale(sampleLocale)
+    volumeFormatter:setNumberStyle(NSNumberFormatter.Style.DecimalStyle)
+    volumeFormatter:setPositiveFormat("###,###,###")
+    
+    
+    local currentOffset = 0
+    
+    while currentOffset < #sampleStockData do
+        local tradingDate = dateFormatter:dateFromString(sampleStockData[currentOffset + sampleStockDateIndex])
+        local closingPrice = priceFormatter:numberFromString (sampleStockData[currentOffset + sampleStockClosePriceIndex])
+        local tradingVolume = volumeFormatter:numberFromString (sampleStockData[currentOffset + sampleStockVolumeIndex])
         
-        local dateFormatter = objc.NSDateFormatter:new()
-        dateFormatter:setLocale(sampleLocale)
-        dateFormatter:setDateFormat("MMM d, yyyy")
-        
-        local priceFormatter = objc.NSNumberFormatter:new()
-        priceFormatter:setLocale(sampleLocale)
-        priceFormatter:setNumberStyle(NSNumberFormatter.Style.DecimalStyle)
-        
-        local volumeFormatter= objc.NSNumberFormatter:new()
-        volumeFormatter:setLocale(sampleLocale)
-        volumeFormatter:setNumberStyle(NSNumberFormatter.Style.DecimalStyle)
-        volumeFormatter:setPositiveFormat("###,###,###")
-        
-        
-        local currentOffset = 0
-        
-        while currentOffset < #sampleStockData do
-            local tradingDate = dateFormatter:dateFromString(sampleStockData[currentOffset + sampleStockDateIndex])
-            local closingPrice = priceFormatter:numberFromString (sampleStockData[currentOffset + sampleStockClosePriceIndex])
-            local tradingVolume = volumeFormatter:numberFromString (sampleStockData[currentOffset + sampleStockVolumeIndex])
-            
-            local dailyTradingInfo = class.StockDailyTradeInfo:newWithTradingInfo (tradingDate, tradingVolume, closingPrice)
-            if dailyTradingInfo ~= nil then
-                table.insert (self._dailyTradeInfo, dailyTradingInfo)
-            end
-            
-            currentOffset = currentOffset + sampleStockRecordOffset
+        local dailyTradingInfo = class.StockDailyTradeInfo:newWithTradingInfo (tradingDate, tradingVolume, closingPrice)
+        if dailyTradingInfo ~= nil then
+            table.insert (self._dailyTradeInfo, dailyTradingInfo)
         end
         
-        -- sort self._dailyTradeInfo by date (increasing)
-        table.sort (self._dailyTradeInfo, 
-                    function (dayInfo1, dayInfo2)
-                        return dayInfo1.date:timeIntervalSinceDate(dayInfo2.date) < 0
-                    end)
+        currentOffset = currentOffset + sampleStockRecordOffset
     end
-    return self
+    
+    -- sort self._dailyTradeInfo by date (increasing)
+    table.sort (self._dailyTradeInfo, 
+                function (dayInfo1, dayInfo2)
+                    return dayInfo1.date:timeIntervalSinceDate(dayInfo2.date) < 0
+                end)
 end
 
 return SampleStockTradeInfo
