@@ -6,26 +6,124 @@
 	<array>
 		<dict>
 			<key>LibId</key>
-			<string>apple_sdk_iphoneos8.1</string>
+			<string>apple_sdk_iphoneos8.3</string>
 			<key>LibName</key>
 			<string>iOS</string>
+		</dict>
+		<dict>
+			<key>BindingsLibSourceGroupType</key>
+			<string>SelfGeneratedBindingsLib</string>
+			<key>CustomBindingsLibBindingsSourcePath</key>
+			<string>/Volumes/Brume/Celedev CodeFlow/CodeFlow Sample Applications/Simple Stocks/SimpleStocks.xcodeproj</string>
+			<key>CustomBindingsLibHeadersParsingOptions</key>
+			<array>
+				<string>-include</string>
+				<string>/Volumes/Brume/Celedev CodeFlow/CodeFlow Sample Applications/Simple Stocks/SimpleStocks/SimpleStocks-Prefix.pch</string>
+				<string>-fobjc-arc</string>
+			</array>
+			<key>CustomBindingsLibHeadersSearchPaths</key>
+			<array>
+				<string>$(USER_LIBRARY_DIR)/Application\ Support/com.celedev.CodeFlow/iphoneos/include</string>
+				<string>$(USER_LIBRARY_DIR)/Application\ Support/com.celedev.CodeFlow/headers</string>
+			</array>
+			<key>CustomBindingsLibLastGenerationDate</key>
+			<date>2015-05-20T16:17:15Z</date>
+			<key>CustomBindingsLibSourceFilesTree</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGVldYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK8QFQcIERIXHB0hJictLjQ7PD1BRklN
+			UlUkbnVsbNQJCgsMDQ4PEFZvYmplY3RUbmFtZVphdHRyaWJ1dGVz
+			ViRjbGFzc4ADgAKAFIATUNITDBQWWk5TLm9iamVjdHOhFYAEgBHU
+			CQoLDBgZGhCABoAFgBKAE1xTaW1wbGVTdG9ja3PSEwweFqEfgAeA
+			EdQJCgsMIiMkJYAJgAiADIAQXxAQQ0lNQXBwRGVsZWdhdGUuaNMo
+			DCkqKyxXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAuACl8Qd2ZpbGU6
+			Ly8vVm9sdW1lcy9CcnVtZS9DZWxlZGV2JTIwQ29kZUZsb3cvQ29k
+			ZUZsb3clMjBTYW1wbGUlMjBBcHBsaWNhdGlvbnMvU2ltcGxlJTIw
+			U3RvY2tzL1NpbXBsZVN0b2Nrcy9DSU1BcHBEZWxlZ2F0ZS5o0i8w
+			MTJaJGNsYXNzbmFtZVgkY2xhc3Nlc1VOU1VSTKIxM1hOU09iamVj
+			dNM1Eww2ODpXTlMua2V5c6E3gA2hOYAOgA9Yc2VsZWN0ZWQI0i8w
+			Pj9fEBNOU011dGFibGVEaWN0aW9uYXJ5oz5AM1xOU0RpY3Rpb25h
+			cnnSLzBCQ1xDREZMTmFtZWRVcmyjREUzXENERkxOYW1lZFVybF1D
+			REZMTmFtZWRJdGVt0i8wR0hXTlNBcnJheaJHM9M1EwxKSzqgoIAP
+			0i8wTk9eQ0RGTE5hbWVkR3JvdXCjUFEzXkNERkxOYW1lZEdyb3Vw
+			XUNERkxOYW1lZEl0ZW3TNRMMU1Q6oKCAD18QD05TS2V5ZWRBcmNo
+			aXZlctFYWVRyb290gAEACAARABoAIwAtADIANwBPAFUAXgBlAGoA
+			dQB8AH4AgACCAIQAhQCKAJUAlwCZAJsApACmAKgAqgCsALkAvgDA
+			AMIAxADNAM8A0QDTANUA6ADvAPcBAwEFAQcBCQGDAYgBkwGcAaIB
+			pQGuAbUBvQG/AcEBwwHFAccB0AHRAdYB7AHwAf0CAgIPAhMCIAIu
+			AjMCOwI+AkUCRgJHAkkCTgJdAmECcAJ+AoUChgKHAokCmwKeAqMA
+			AAAAAAACAQAAAAAAAABaAAAAAAAAAAAAAAAAAAACpQ==
+			</data>
+			<key>CustomBindingsLibTargetOSVersion</key>
+			<string>6.1</string>
+			<key>CustomBindingsLibXcodeTargetInfo</key>
+			<dict>
+				<key>target</key>
+				<string>SimpleStocks</string>
+				<key>targetSdk</key>
+				<string>iphoneos</string>
+				<key>targetType</key>
+				<string>com.apple.product-type.application</string>
+			</dict>
+			<key>LibBookmark</key>
+			<data>
+			Ym9va+QEAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAA1AMAAAQAAAADAwAAAAIAAAUAAAABAQAAVXNlcnMA
+			AAAIAAAAAQEAAGplYW4tbHVjBwAAAAEBAABMaWJyYXJ5AAYAAAAB
+			AQAAQ2FjaGVzAAAUAAAAAQEAAGNvbS5jZWxlZGV2LkNvZGVGbG93
+			CAAAAAEBAABQcm9ncmFtcyQAAAABAQAAREY4Mjk0MTAtQzY5OC00
+			OURFLTlENEEtMkU1QjM1REM1MDJCDAAAAAEBAABFeHRlcm5hbExp
+			YnMYAAAAAQEAAFNpbXBsZVN0b2Nrcy5sdWFiaW5kaW5ncyQAAAAB
+			BgAAEAAAACAAAAAwAAAAQAAAAFAAAABsAAAAfAAAAKgAAAC8AAAA
+			CAAAAAQDAAB8ZAIAAAAAAAgAAAAEAwAAw3tOAAAAAAAIAAAABAMA
+			ADh8TgAAAAAACAAAAAQDAABufE4AAAAAAAgAAAAEAwAA8U+QAQAA
+			AAAIAAAABAMAAPd3kAEAAAAACAAAAAQDAABXf5ABAAAAAAgAAAAE
+			AwAAWH+QAQAAAAAIAAAABAMAAF5/kAEAAAAAJAAAAAEGAAAIAQAA
+			GAEAACgBAAA4AQAASAEAAFgBAABoAQAAeAEAAIgBAAAIAAAAAAQA
+			AEG7DOr7AAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAA
+			AAAIAAAABAMAAAcAAAAAAAAABAAAAAMDAAD3AQAACAAAAAEJAABm
+			aWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAAEan
+			AwEAAAgAAAAABAAAQbgi/8AAAAAkAAAAAQEAADFCQjM0QjhBLTdG
+			NTktM0MyOS05QkE5LTIxM0FFODQ5Mzg2RRgAAAABAgAAgQAAAAEA
+			CADvFwAAAQAIAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAAAY
+			AQAAAQIAADAyNjQzYjUyMjlhYmUwNjBiY2RjMjU5ZDY3YmIzNzgx
+			ZjE2N2E3YWI7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAw
+			MDAyMDtjb20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0ZTsw
+			MDAwMDAwMTswMTAwMDAwODswMDAwMDAwMDAxOTA3ZjVlOy91c2Vy
+			cy9qZWFuLWx1Yy9saWJyYXJ5L2NhY2hlcy9jb20uY2VsZWRldi5j
+			b2RlZmxvdy9wcm9ncmFtcy9kZjgyOTQxMC1jNjk4LTQ5ZGUtOWQ0
+			YS0yZTViMzVkYzUwMmIvZXh0ZXJuYWxsaWJzL3NpbXBsZXN0b2Nr
+			cy5sdWFiaW5kaW5ncwDYAAAA/v///wEAAAAAAAAAEQAAAAQQAADc
+			AAAAAAAAAAUQAACYAQAAAAAAABAQAADUAQAAAAAAAEAQAADEAQAA
+			AAAAAAIgAACgAgAAAAAAAAUgAAAQAgAAAAAAABAgAAAgAgAAAAAA
+			ABEgAABUAgAAAAAAABIgAAA0AgAAAAAAABMgAABEAgAAAAAAACAg
+			AACAAgAAAAAAADAgAACsAgAAAAAAAAHAAAD0AQAAAAAAABHAAAAg
+			AAAAAAAAABLAAAAEAgAAAAAAABDQAAAEAAAAAAAAAIDwAAC0AgAA
+			AAAAAA==
+			</data>
+			<key>LibName</key>
+			<string>SimpleStocks</string>
+			<key>LibUrl</key>
+			<string>file:///Users/jean-luc/Library/Caches/com.celedev.CodeFlow/Programs/DF829410-C698-49DE-9D4A-2E5B35DC502B/ExternalLibs/SimpleStocks.luabindings</string>
 		</dict>
 	</array>
 	<key>Program Display Info</key>
 	<dict>
 		<key>LuaAppDocument-associatedXodeProject</key>
 		<dict>
-			<key>platform</key>
-			<string>iphoneos</string>
 			<key>project</key>
 			<string>SimpleStocks.xcodeproj</string>
 			<key>target</key>
 			<string>SimpleStocks</string>
+			<key>targetSdk</key>
+			<string>iphoneos</string>
+			<key>targetType</key>
+			<string>com.apple.product-type.application</string>
 		</dict>
 		<key>LuaAppWindow edited source path</key>
-		<string>SimpleStockView</string>
+		<string>SampleStockTradeInfo</string>
 		<key>LuaAppWindow frame</key>
-		<string>30 444 1440 751 0 0 2560 1417 </string>
+		<string>898 582 1440 751 0 0 2560 1417 </string>
 	</dict>
 	<key>Program Format Version</key>
 	<string>0.9</string>
@@ -99,9 +197,9 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>8369</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1680</integer>
+				<integer>3204</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>6718</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>SimpleStockView</key>
@@ -121,9 +219,9 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>15345</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1680</integer>
+				<integer>1432</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>14365</integer>
+				<integer>811</integer>
 			</dict>
 		</dict>
 		<key>StockTradeInfo</key>
@@ -143,9 +241,9 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>515</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1308</integer>
+				<integer>2701</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>0</integer>
+				<integer>4305</integer>
 			</dict>
 		</dict>
 		<key>StockViewController</key>

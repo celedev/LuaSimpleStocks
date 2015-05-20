@@ -6,7 +6,7 @@ If you run the SimpleStock app on an iPhone and an iPad, and switch from one to 
 
 ## Configuration required
 
-A Mac with Celedev CodeFlow version 0.9.11 or later.
+A Mac with Celedev CodeFlow version 0.9.15 or later.
 
 Works on iPhone or iPad, running iOS 6 or later.
 
