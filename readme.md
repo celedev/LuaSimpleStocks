@@ -14,7 +14,8 @@ Points of interest of this sample app include:
 
 ## Configuration required
 
-A Mac with Celedev CodeFlow version 0.9.15 or later.
+A Mac with Celedev CodeFlow version 0.9.15 or later.  
+You can download CodeFlow from <https://www.celedev.com/en/support/#downloads> (registration required).
 
 Works on iPhone or iPad, running iOS 6 or later.
 
