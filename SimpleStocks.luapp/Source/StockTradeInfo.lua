@@ -3,9 +3,13 @@ local NSCalendar = require 'Foundation.NSCalendar'
 local StockDailyTradeInfo = class.createClass ('StockDailyTradeInfo')
 
 function StockDailyTradeInfo:initWithTradingInfo (date, volume, closingPrice)
-    self.date = date
-    self.volume = volume
-    self.closingPrice = closingPrice
+    if date and volume and closingPrice then
+        self.date = date
+        self.volume = volume
+        self.closingPrice = closingPrice
+    else
+        self = nil
+    end
     return self;
 end
 
@@ -13,7 +17,11 @@ end
 local StockTradeInfo = class.createClass ('StockTradeInfo')
 
 function StockTradeInfo:init()
-    self._dailyTradeInfo = {} -- Sorted-by-date array of StockDailyTradeInfo
+    self._dailyTradeInfo = {} -- Array of StockDailyTradeInfo sorted by date
+end
+
+function StockTradeInfo:parseStockInfo(stockInfoText)
+    -- nothing by default
 end
 
 function StockTradeInfo:dailyTradeInfoCount()
@@ -126,5 +134,15 @@ StockTradeInfo:declareGetters { tradingDaysCount = 'dailyTradeInfoCount',
                                                  end,
                                 monthlyTradeInfo = 'getMonthlyTradeInfo',
                               }
+
+function StockTradeInfo:clearData()
+    self._dailyTradeInfo = {}
+    self._monthlyTradeInfo = nil
+    
+    self._minVolume = nil
+    self._maxVolume = nil
+    self._minClosingPrice = nil
+    self._maxClosingPrice = nil    
+end
 
 return StockTradeInfo

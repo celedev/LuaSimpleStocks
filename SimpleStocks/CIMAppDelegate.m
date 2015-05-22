@@ -30,11 +30,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // Run the code for this Lua context
-    [_luaContext loadLuaModuleNamed:@"CreateController" withCompletionBlock:^(id result) {
+    [_luaContext loadLuaModuleNamed:@"StockViewController" withCompletionBlock:^(Class viewControllerClass) {
         
-        if ([result isKindOfClass:[UIViewController class]])
+        if ( [viewControllerClass isSubclassOfClass:[UIViewController class]])
         {
-            _viewController = result;
+            _viewController = [viewControllerClass new];
             self.window.rootViewController = _viewController;
         }
     }];

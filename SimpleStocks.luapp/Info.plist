@@ -23,11 +23,10 @@
 			</array>
 			<key>CustomBindingsLibHeadersSearchPaths</key>
 			<array>
-				<string>$(USER_LIBRARY_DIR)/Application\ Support/com.celedev.CodeFlow/iphoneos/include</string>
 				<string>$(USER_LIBRARY_DIR)/Application\ Support/com.celedev.CodeFlow/headers</string>
 			</array>
 			<key>CustomBindingsLibLastGenerationDate</key>
-			<date>2015-05-20T16:17:15Z</date>
+			<date>2015-05-22T12:52:33Z</date>
 			<key>CustomBindingsLibSourceFilesTree</key>
 			<data>
 			YnBsaXN0MDDUAQIDBAUGVldYJHZlcnNpb25YJG9iamVjdHNZJGFy
@@ -67,48 +66,55 @@
 			</dict>
 			<key>LibBookmark</key>
 			<data>
-			Ym9va+QEAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAA1AMAAAQAAAADAwAAAAIAAAUAAAABAQAAVXNlcnMA
+			Ym9va+wEAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAA3AMAAAQAAAADAwAAAAIAAAUAAAABAQAAVXNlcnMA
 			AAAIAAAAAQEAAGplYW4tbHVjBwAAAAEBAABMaWJyYXJ5AAYAAAAB
 			AQAAQ2FjaGVzAAAUAAAAAQEAAGNvbS5jZWxlZGV2LkNvZGVGbG93
-			CAAAAAEBAABQcm9ncmFtcyQAAAABAQAAREY4Mjk0MTAtQzY5OC00
-			OURFLTlENEEtMkU1QjM1REM1MDJCDAAAAAEBAABFeHRlcm5hbExp
-			YnMYAAAAAQEAAFNpbXBsZVN0b2Nrcy5sdWFiaW5kaW5ncyQAAAAB
-			BgAAEAAAACAAAAAwAAAAQAAAAFAAAABsAAAAfAAAAKgAAAC8AAAA
-			CAAAAAQDAAB8ZAIAAAAAAAgAAAAEAwAAw3tOAAAAAAAIAAAABAMA
-			ADh8TgAAAAAACAAAAAQDAABufE4AAAAAAAgAAAAEAwAA8U+QAQAA
-			AAAIAAAABAMAAPd3kAEAAAAACAAAAAQDAABXf5ABAAAAAAgAAAAE
-			AwAAWH+QAQAAAAAIAAAABAMAAF5/kAEAAAAAJAAAAAEGAAAIAQAA
-			GAEAACgBAAA4AQAASAEAAFgBAABoAQAAeAEAAIgBAAAIAAAAAAQA
-			AEG7DOr7AAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAA
-			AAAIAAAABAMAAAcAAAAAAAAABAAAAAMDAAD3AQAACAAAAAEJAABm
-			aWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAAEan
-			AwEAAAgAAAAABAAAQbgi/8AAAAAkAAAAAQEAADFCQjM0QjhBLTdG
-			NTktM0MyOS05QkE5LTIxM0FFODQ5Mzg2RRgAAAABAgAAgQAAAAEA
-			CADvFwAAAQAIAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAAAY
-			AQAAAQIAADAyNjQzYjUyMjlhYmUwNjBiY2RjMjU5ZDY3YmIzNzgx
-			ZjE2N2E3YWI7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAw
-			MDAyMDtjb20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0ZTsw
-			MDAwMDAwMTswMTAwMDAwODswMDAwMDAwMDAxOTA3ZjVlOy91c2Vy
-			cy9qZWFuLWx1Yy9saWJyYXJ5L2NhY2hlcy9jb20uY2VsZWRldi5j
-			b2RlZmxvdy9wcm9ncmFtcy9kZjgyOTQxMC1jNjk4LTQ5ZGUtOWQ0
-			YS0yZTViMzVkYzUwMmIvZXh0ZXJuYWxsaWJzL3NpbXBsZXN0b2Nr
-			cy5sdWFiaW5kaW5ncwDYAAAA/v///wEAAAAAAAAAEQAAAAQQAADc
-			AAAAAAAAAAUQAACYAQAAAAAAABAQAADUAQAAAAAAAEAQAADEAQAA
-			AAAAAAIgAACgAgAAAAAAAAUgAAAQAgAAAAAAABAgAAAgAgAAAAAA
-			ABEgAABUAgAAAAAAABIgAAA0AgAAAAAAABMgAABEAgAAAAAAACAg
-			AACAAgAAAAAAADAgAACsAgAAAAAAAAHAAAD0AQAAAAAAABHAAAAg
-			AAAAAAAAABLAAAAEAgAAAAAAABDQAAAEAAAAAAAAAIDwAAC0AgAA
-			AAAAAA==
+			CAAAAAEBAABQcm9ncmFtcyQAAAABAQAARUYzRjgzM0MtMjQwRS00
+			MTBFLTlGQzctRTc1QzMzRTQzRkIwDAAAAAEBAABFeHRlcm5hbExp
+			YnMZAAAAAQEAAFNpbXBsZVN0b2NrczEubHVhYmluZGluZ3MAAAAk
+			AAAAAQYAABAAAAAgAAAAMAAAAEAAAABQAAAAbAAAAHwAAACoAAAA
+			vAAAAAgAAAAEAwAAfGQCAAAAAAAIAAAABAMAAMN7TgAAAAAACAAA
+			AAQDAAA4fE4AAAAAAAgAAAAEAwAAbnxOAAAAAAAIAAAABAMAAPFP
+			kAEAAAAACAAAAAQDAAAw3ZABAAAAAAgAAAAEAwAA6NKRAQAAAAAI
+			AAAABAMAAOnSkQEAAAAACAAAAAQDAAD30pEBAAAAACQAAAABBgAA
+			DAEAABwBAAAsAQAAPAEAAEwBAABcAQAAbAEAAHwBAACMAQAACAAA
+			AAAEAABBuw9UvAAAABgAAAABAgAAAgAAAAAAAAAPAAAAAAAAAAAA
+			AAAAAAAACAAAAAQDAAAHAAAAAAAAAAQAAAADAwAA9wEAAAgAAAAB
+			CQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAEAwAA
+			AABGpwMBAAAIAAAAAAQAAEG4Iv/AAAAAJAAAAAEBAAAxQkIzNEI4
+			QS03RjU5LTNDMjktOUJBOS0yMTNBRTg0OTM4NkUYAAAAAQIAAIEA
+			AAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAAB
+			BQAAGQEAAAECAAAyNWE0N2MxNmJkNzA4MDUyNjg4NzY4ZjdhYTk3
+			NTMzNTA2YjVjOGZiOzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAwMDAw
+			MDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJlYWQtd3Jp
+			dGU7MDAwMDAwMDE7MDEwMDAwMDg7MDAwMDAwMDAwMTkxZDJmNzsv
+			dXNlcnMvamVhbi1sdWMvbGlicmFyeS9jYWNoZXMvY29tLmNlbGVk
+			ZXYuY29kZWZsb3cvcHJvZ3JhbXMvZWYzZjgzM2MtMjQwZS00MTBl
+			LTlmYzctZTc1YzMzZTQzZmIwL2V4dGVybmFsbGlicy9zaW1wbGVz
+			dG9ja3MxLmx1YWJpbmRpbmdzAAAAANgAAAD+////AQAAAAAAAAAR
+			AAAABBAAAOAAAAAAAAAABRAAAJwBAAAAAAAAEBAAANgBAAAAAAAA
+			QBAAAMgBAAAAAAAAAiAAAKQCAAAAAAAABSAAABQCAAAAAAAAECAA
+			ACQCAAAAAAAAESAAAFgCAAAAAAAAEiAAADgCAAAAAAAAEyAAAEgC
+			AAAAAAAAICAAAIQCAAAAAAAAMCAAALACAAAAAAAAAcAAAPgBAAAA
+			AAAAEcAAACAAAAAAAAAAEsAAAAgCAAAAAAAAENAAAAQAAAAAAAAA
+			gPAAALgCAAAAAAAA
 			</data>
 			<key>LibName</key>
 			<string>SimpleStocks</string>
 			<key>LibUrl</key>
-			<string>file:///Users/jean-luc/Library/Caches/com.celedev.CodeFlow/Programs/DF829410-C698-49DE-9D4A-2E5B35DC502B/ExternalLibs/SimpleStocks.luabindings</string>
+			<string>file:///Users/jean-luc/Library/Caches/com.celedev.CodeFlow/Programs/EF3F833C-240E-410E-9FC7-E75C33E43FB0/ExternalLibs/SimpleStocks1.luabindings</string>
 		</dict>
 	</array>
 	<key>Program Display Info</key>
 	<dict>
+		<key>LuaAppDocument remote Lua service</key>
+		<array>
+			<string>SimpleStocks - Context (Celedev's iPad)</string>
+			<string>SimpleStocks - Context (iPad de Jean-Luc)</string>
+			<string>SimpleStocks - Context (iPhone de Jean-Luc)</string>
+			<string>SimpleStocks - Context (Astérie)</string>
+		</array>
 		<key>LuaAppDocument-associatedXodeProject</key>
 		<dict>
 			<key>project</key>
@@ -121,9 +127,9 @@
 			<string>com.apple.product-type.application</string>
 		</dict>
 		<key>LuaAppWindow edited source path</key>
-		<string>SampleStockTradeInfo</string>
+		<string>StockViewController</string>
 		<key>LuaAppWindow frame</key>
-		<string>898 582 1440 751 0 0 2560 1417 </string>
+		<string>872 285 1429 759 0 0 2560 1417 </string>
 	</dict>
 	<key>Program Format Version</key>
 	<string>0.9</string>
@@ -131,12 +137,13 @@
 	<dict>
 		<key></key>
 		<array>
-			<string>CreateController</string>
 			<string>StockViewController</string>
 			<string>SimpleStockView</string>
 			<string>StockTradeInfo</string>
-			<string>SampleStockTradeInfo</string>
-			<string>Beach</string>
+			<string>YahooStockTradeInfo</string>
+			<string>Background-image</string>
+			<string>AAPL-stock-info</string>
+			<string>Orange-stock-info</string>
 		</array>
 	</dict>
 	<key>Program Platform Sdk Name</key>
@@ -153,54 +160,33 @@
 				<true/>
 			</dict>
 		</dict>
-		<key>Beach</key>
+		<key>AAPL-stock-info</key>
 		<dict>
 			<key>SourceItemChangeTime</key>
-			<real>389974555</real>
+			<real>453980667.20836598</real>
 		</dict>
-		<key>CreateController</key>
+		<key>Background-image</key>
 		<dict>
-			<key>Source File Auto Reload</key>
-			<false/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>CreateController</string>
 			<key>SourceItemChangeTime</key>
-			<real>417177127.52707601</real>
+			<real>445444598.18223399</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
-				<key>SrcEditor Selected Length</key>
-				<integer>0</integer>
-				<key>SrcEditor Selected Location</key>
-				<integer>0</integer>
-				<key>SrcEditor Visible Length</key>
-				<integer>116</integer>
-				<key>SrcEditor Visible Location</key>
-				<integer>0</integer>
+				<key>ImageViewerMagnification</key>
+				<real>1</real>
+				<key>ImageViewerVisibleHeight</key>
+				<real>346</real>
+				<key>ImageViewerVisibleOriginX</key>
+				<real>0.0</real>
+				<key>ImageViewerVisibleOriginY</key>
+				<real>0.0</real>
+				<key>ImageViewerVisibleWidth</key>
+				<real>395.60000000000002</real>
 			</dict>
 		</dict>
-		<key>SampleStockTradeInfo</key>
+		<key>Orange-stock-info</key>
 		<dict>
-			<key>Source File Auto Reload</key>
-			<false/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>SampleStockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
-			<real>445855865.66095603</real>
-			<key>SourceItemDisplayInfo</key>
-			<dict>
-				<key>SrcEditor Selected Length</key>
-				<integer>0</integer>
-				<key>SrcEditor Selected Location</key>
-				<integer>8369</integer>
-				<key>SrcEditor Visible Length</key>
-				<integer>3204</integer>
-				<key>SrcEditor Visible Location</key>
-				<integer>0</integer>
-			</dict>
+			<real>453980908.81083798</real>
 		</dict>
 		<key>SimpleStockView</key>
 		<dict>
@@ -211,17 +197,17 @@
 			<key>Source File Name</key>
 			<string>SimpleStockView</string>
 			<key>SourceItemChangeTime</key>
-			<real>445855978.04360998</real>
+			<real>453989184.04620898</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>15345</integer>
+				<integer>10934</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1432</integer>
+				<integer>1700</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>811</integer>
+				<integer>15398</integer>
 			</dict>
 		</dict>
 		<key>StockTradeInfo</key>
@@ -233,39 +219,61 @@
 			<key>Source File Name</key>
 			<string>StockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
-			<real>445855815.82538402</real>
+			<real>446115056.02730501</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>515</integer>
+				<integer>0</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>2701</integer>
+				<integer>1204</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>4305</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>StockViewController</key>
 		<dict>
 			<key>Source File Auto Reload</key>
-			<false/>
+			<true/>
 			<key>Source File Is Start Item</key>
 			<false/>
 			<key>Source File Name</key>
 			<string>StockViewController</string>
 			<key>SourceItemChangeTime</key>
-			<real>422369627.82190299</real>
+			<real>453989613.48136097</real>
 			<key>SourceItemDisplayInfo</key>
 			<dict>
 				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
 				<key>SrcEditor Selected Location</key>
-				<integer>0</integer>
+				<integer>1403</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1042</integer>
+				<integer>1442</integer>
 				<key>SrcEditor Visible Location</key>
+				<integer>516</integer>
+			</dict>
+		</dict>
+		<key>YahooStockTradeInfo</key>
+		<dict>
+			<key>Source File Auto Reload</key>
+			<true/>
+			<key>Source File Is Start Item</key>
+			<false/>
+			<key>Source File Name</key>
+			<string>YahooStockTradeInfo</string>
+			<key>SourceItemChangeTime</key>
+			<real>453990321.18000799</real>
+			<key>SourceItemDisplayInfo</key>
+			<dict>
+				<key>SrcEditor Selected Length</key>
 				<integer>0</integer>
+				<key>SrcEditor Selected Location</key>
+				<integer>1522</integer>
+				<key>SrcEditor Visible Length</key>
+				<integer>1352</integer>
+				<key>SrcEditor Visible Location</key>
+				<integer>501</integer>
 			</dict>
 		</dict>
 	</dict>

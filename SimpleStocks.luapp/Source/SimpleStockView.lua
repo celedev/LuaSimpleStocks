@@ -52,7 +52,7 @@ function SimpleStockView:bottomClipPathFromDataInRect (rect)
 end
 
 -- Draw closing data
-local priceLineWidth = 4.0
+local priceLineWidth = 1.0
 
 --The path for the closing data, this is used to draw the graph, and as part of the top and bottom clip paths
 function SimpleStockView:pathForPriceDataInRect(rect)
@@ -60,6 +60,11 @@ function SimpleStockView:pathForPriceDataInRect(rect)
     local tradingDays = self.dataSource.tradingDaysCount
     local maxClosePrice = self.dataSource.maxClosingPrice
     local minClosePrice = self.dataSource.minClosingPrice
+    
+    --[[ local priceLineWidth = priceLineWidth
+    if math.min(rect.size.width, rect.size.height) < 500 then
+        priceLineWidth = math.floor(priceLineWidth * 0.6)
+    end]]
     
     local path = UIBezierPath:bezierPath()
     path:setLineWidth(priceLineWidth)
@@ -214,7 +219,7 @@ function SimpleStockView:drawImageUnderPriceData (rect, imageResourceName)
     CgContext.RestoreGState(ctx)
 end
 
-local gridColor = UIColor:colorWithRed_green_blue_alpha (74.0 / 255.0, 86.0 / 255.0, 126.0 / 266.0, 1.0)
+local gridColor = UIColor:colorWithRed_green_blue_alpha (154.0 / 255.0, 156.0 / 255.0, 216.0 / 255.0, 1.0)
 
 -- Draw the horizontal grid clipped by the price data
 function SimpleStockView:drawHorizontalGridInRect (rect)
@@ -255,14 +260,14 @@ function SimpleStockView:drawVerticalGridInRect (pricesRect, volumeRectHeight)
     gridLine:addLineToPoint { x = rectMinX, y = pricesRect:getMaxY() + volumeRectHeight }
     
     gridColor:setStroke()
-    gridLine:stroke()
+    -- gridLine:stroke()
         
     local ctx = UiGraphics.GetCurrentContext()
     CgContext.SaveGState(ctx)
     
     local horizontalDaySpacing = pricesRect.size.width / dataCount
     
-    for monthIndex = 1, #monthlyTradeInfo do
+    for monthIndex = 1, #monthlyTradeInfo - 1 do
         local lineOffset = floor(horizontalDaySpacing * monthlyTradeInfo[monthIndex].tradingDays)
         CgContext.TranslateCTM (ctx, lineOffset, 0.0)
         gridLine:stroke()
@@ -270,18 +275,19 @@ function SimpleStockView:drawVerticalGridInRect (pricesRect, volumeRectHeight)
     
     CgContext.RestoreGState(ctx)
     
-    -- Stroke last vertical line
+    --[[ -- Stroke last vertical line
     CgContext.SaveGState(ctx)
     CgContext.TranslateCTM (ctx, pricesRect:getMaxX(), 0.0)
     gridLine:stroke()
-    CgContext.RestoreGState(ctx)
+    CgContext.RestoreGState(ctx)]]
 end
 
-local backgroundGradient = createGradientInRGBSpaceWithColorComponents ({ 48.0 / 255.0, 61.0 / 255.0, 114.0 / 255.0, 1.0,
-                                                                          33.0 / 255.0, 47.0 / 255.0, 113.0 / 255.0, 1.0,
-                                                                          20.0 / 255.0, 33.0 / 255.0, 104.0 / 255.0, 1.0,
-                                                                          20.0 / 255.0, 33.0 / 255.0, 104.0 / 255.0, 1.0 },
-                                                                        {0.0, 0.5, 0.5, 1.0})
+local backgroundGradient = createGradientInRGBSpaceWithColorComponents 
+                           ({ 148.0 / 255.0, 161.0 / 255.0, 214.0 / 255.0, 1.0,
+                              33.0 / 255.0, 47.0 / 255.0, 113.0 / 255.0, 1.0,
+                              20.0 / 255.0, 33.0 / 255.0, 104.0 / 255.0, 1.0,
+                              120.0 / 255.0, 33.0 / 255.0, 104.0 / 255.0, 1.0 },
+                            {0.0, 0.5, 0.5, 1.0})
 
 function SimpleStockView:drawBackgroundGradient()
     local ctx = UiGraphics.GetCurrentContext()
@@ -290,13 +296,13 @@ function SimpleStockView:drawBackgroundGradient()
     CgContext.DrawLinearGradient (ctx, backgroundGradient, startPoint, endPoint, 0)
 end
 
-local volumeLineWidthRatio = 0.6
+local volumeLineWidthRatio = 0.4
 
 function SimpleStockView:drawVolumeDataInRect(volumeRect)
 
     local tradingDays = self.dataSource.tradingDaysCount
 
-    local minVolume = self.dataSource.minDailyVolume
+    local minVolume = 0--self.dataSource.minDailyVolume
     local maxVolume = self.dataSource.maxDailyVolume
     
     local rectMinX = volumeRect:getMinX()
@@ -304,7 +310,7 @@ function SimpleStockView:drawVolumeDataInRect(volumeRect)
     local horizontalSpacing = volumeRect.size.width / tradingDays
     local verticalScale = volumeRect.size.height / (maxVolume - minVolume)
     
-    local volumeLineWidth = 4 -- horizontalSpacing * volumeLineWidthRatio
+    local volumeLineWidth =  horizontalSpacing * volumeLineWidthRatio
     
     local ctx = UiGraphics.GetCurrentContext()
     CgContext.SaveGState(ctx)
@@ -320,7 +326,6 @@ function SimpleStockView:drawVolumeDataInRect(volumeRect)
         path:addLineToPoint { x = dayVolumeX, y = rectMaxY - (tradingVolume - minVolume) * verticalScale }
         path:stroke()
     end
-
     
     CgContext.RestoreGState(ctx)
 end
@@ -333,17 +338,32 @@ dateFormatter:setDateFormat (objc.NSDateFormatter:dateFormatFromTemplate_options
 
 local shadowHeight = 2.0
 
-function SimpleStockView:drawMonthNamesTextUnderVolumeRect(volumeRect, monthNameFontSize)
+local pi = math.pi
+function SimpleStockView:drawMonthNamesTextUnderVolumeRect(volumeRect, monthNamesHeight)
     
     local dataCount = self.dataSource.tradingDaysCount
     local monthlyTradeInfo = self.dataSource.monthlyTradeInfo
+    
+    local monthAverageWidth = volumeRect.size.width / #monthlyTradeInfo
+    local monthNameFontSize
+    local monthNameRotationAngle
+    if monthAverageWidth > 5 * monthNamesHeight then
+        monthNameFontSize = monthNamesHeight * 0.8
+    else
+        monthNameFontSize = monthAverageWidth / 5
+        
+        if monthNameFontSize < 12 then
+            monthNameFontSize = 12
+            monthNameRotationAngle = -pi / 12
+        end
+    end
     local monthNameFont = objc.UIFont:boldSystemFontOfSize (monthNameFontSize)
     
     whiteColor:setFill()
     
     local ctx = UiGraphics.GetCurrentContext()
     CgContext.SaveGState(ctx)
-    CgContext.TranslateCTM(ctx, volumeRect.origin.x, 0.0)
+    CgContext.TranslateCTM(ctx, volumeRect.origin.x, volumeRect:getMaxY())
     
     CgContext.SetShadowWithColor(ctx, { width = 1.0, height = -shadowHeight}, 0.0, UIColor:darkGrayColor().CGColor)
     
@@ -352,18 +372,28 @@ function SimpleStockView:drawMonthNamesTextUnderVolumeRect(volumeRect, monthName
     for monthIndex = 1, #monthlyTradeInfo do
         
         if monthIndex > 1 then
-            -- Move to the end of the previous mont
+            -- Move to the end of the previous month
             local linePosition = floor(tradingDaySpacing * monthlyTradeInfo[monthIndex - 1].tradingDays)
             CgContext.TranslateCTM(ctx, linePosition, 0.0)
+        end
+        
+        if monthNameRotationAngle then
+            CgContext.SaveGState(ctx)
+            CgContext.TranslateCTM(ctx, 0, monthNamesHeight / 2)
+            CgContext.RotateCTM(ctx, monthNameRotationAngle)
         end
         
         local monthGraphWidth = tradingDaySpacing * monthlyTradeInfo[monthIndex].tradingDays
         local date = monthlyTradeInfo[monthIndex].date
         local monthName = dateFormatter:stringFromDate(date)
         local monthSize = monthName:sizeWithFont(monthNameFont)
-        if monthSize.width <= monthGraphWidth then
-            local monthRect = CGRect(0.0--[[ (monthGraphWidth - monthSize.width) / 2]], volumeRect:getMaxY(), monthSize.width, monthSize.height)
+        if monthNameRotationAngle or (monthSize.width <= monthGraphWidth) then
+            local monthRect = CGRect((monthGraphWidth - monthSize.width) / 2, 0, monthSize.width, monthSize.height)
             monthName:drawInRect_withFont(monthRect, monthNameFont)
+        end
+        
+        if monthNameRotationAngle then
+            CgContext.RestoreGState(ctx)
         end
     end
     
@@ -372,25 +402,34 @@ end
 
 local graphMargin = 0
 local volumeGraphicTopMargin = 15
-local volumeGraphicHeightRatio = 0.15
-local artPatternCellsHCount = 9
+local volumeGraphicHeightRatio = 0.14
+local artPatternCellsHCount = 7
+
+priceLineWidth = 3.0
 
 function CGRect:translate (dx, dy)
     self.origin.x = self.origin.x + dx
     self.origin.y = self.origin.y + dy
 end
-    
+
+local min = math.min
+local max = math.max
+
 function SimpleStockView:drawRect (rect)
     
     local bounds = self.bounds
     bounds = bounds:inset (graphMargin, graphMargin)
     
+    print ("In drawRect", bounds)
+    
     local topReservedHeight = 0.08 * bounds.size.height
     local volumeGraphicHeight = volumeGraphicHeightRatio * bounds.size.height
-    local monthNameFontSize = math.max (0.20 * volumeGraphicHeight, 17)
+    local monthNamesHeight = min (max (0.3 * volumeGraphicHeight, 0), 100)
     
-    local pricesRect = CGRect (bounds.origin.x, bounds.origin.y + topReservedHeight, bounds.size.width, 
-                               bounds.size.height - (topReservedHeight + volumeGraphicTopMargin + volumeGraphicHeight + monthNameFontSize * 1.5))
+    local pricesRect = CGRect (bounds.origin.x, bounds.origin.y + topReservedHeight, 
+                               bounds.size.width, 
+                               bounds.size.height - (topReservedHeight + volumeGraphicTopMargin + 
+                                                     volumeGraphicHeight + monthNamesHeight))
     local volumeRect = CGRect (pricesRect:getMinX(), pricesRect:getMaxY() + volumeGraphicTopMargin,
                                pricesRect.size.width, volumeGraphicHeight)
     
@@ -401,14 +440,14 @@ function SimpleStockView:drawRect (rect)
     
     -- Prices Graph and background
     local patternCellSize = math.min (bounds.size.width, bounds.size.height) / artPatternCellsHCount
-    self:drawArtPatternUnderPriceData (pricesRect, patternCellSize)
-    -- self:drawImageUnderPriceData (pricesRect, 'Beach')
+    -- self:drawArtPatternUnderPriceData (pricesRect, patternCellSize)
+    self:drawImageUnderPriceData (pricesRect, 'Background-image')
     self:drawLinePatterUnderPriceData (pricesRect, true)
     self:drawPriceDataInRect (pricesRect)
     
     -- Volumes and Months names
     self:drawVolumeDataInRect (volumeRect)
-    self:drawMonthNamesTextUnderVolumeRect (volumeRect, monthNameFontSize)
+    self:drawMonthNamesTextUnderVolumeRect (volumeRect, monthNamesHeight)
 end
 
 return SimpleStockView

@@ -1,8 +1,16 @@
 # Simple Stocks
 
-SimpleStock defines a custom view and draws a complex stock history graphics in this View. It shows how straightforward it is to call C-based APIs like CoreGraphics from Lua with CodeFlow.
+SimpleStock defines a custom view and draws a complex stock history graphics in this View using CoreGraphics. 
 
-If you run the SimpleStock app on an iPhone and an iPad, and switch from one to the other with the target button in CodeFlow, you will experience how live-coding helps to fine-tune an application on multiple screen sizes.
+![SimpleStock screen capture](readme-image1.png)
+
+Points of interest of this sample app include:
+
+- It illustrates how straightforward it is to call C-based APIs like CoreGraphics from Lua in CodeFlow (see Lua module *SimpleStockView*). Comment / uncomment various calls in method `drawRect` of this class to quickly experiment in real time what each one of them do!
+- The application's data model (the stocks info) is stored in a Lua table and the generation of this table is a mix of Lua standard functions and iOS SDK calls (the data model is defined in Lua Modules *StockTradeInfo* and *YahooStockTradeInfo*).
+- The data model and the display are updated automatically if the stock information changes, but also if the code of specific modules is changed. Have a look at *StockViewController* and *YahooStockTradeInfo* to see how this is done.
+- Running SimpleStocks on multiple devices with various screen sizes (e.g. an iPhone and an iPad), or in different orientations is a good way to experience the benefits of multi-devices live coding with CodeFlow.
+- On the Objective-C side, note that the creation of the application's root view controller is simply done by creating an instance of the Lua class returned when loading Lua module *StockViewController*. This is an example of how easy it is to use a Lua class from Objective-C.
 
 ## Configuration required
 
