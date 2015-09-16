@@ -11,6 +11,9 @@
 #import "CIMLua/CIMLua.h"
 #import "CIMLua/CIMLuaContextMonitor.h"
 
+@interface DefautRootViewController : UIViewController
+@end
+
 @implementation CIMAppDelegate
 {
     CIMLuaContext* _luaContext;
@@ -28,6 +31,7 @@
     // Create the application window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [DefautRootViewController new];
     
     // Run the code for this Lua context
     [_luaContext loadLuaModuleNamed:@"StockViewController" withCompletionBlock:^(Class viewControllerClass) {
@@ -50,6 +54,18 @@
 + (NSLocale*) newWithIdentifier:(NSString *)string
 {
     return [[self alloc] initWithLocaleIdentifier:string];
+}
+
+@end
+
+@implementation DefautRootViewController
+
+- (void) loadView 
+{
+    UIView* defaultRootView = [UIView new];
+    defaultRootView.backgroundColor = UIColor.whiteColor;
+    
+    self.view = defaultRootView;
 }
 
 @end

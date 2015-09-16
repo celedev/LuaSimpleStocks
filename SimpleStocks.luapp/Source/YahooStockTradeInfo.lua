@@ -66,7 +66,7 @@ function YahooStockTradeInfo:parseStockInfo(stockInfoText)
         local unsortedDaylyInfo = {}
         local textRange = struct.NSRange(0, #stockInfoText)
         
-        stockInfoText:enumerateSubstringsInRange_options_usingBlock (textRange, NsString.EnumerationOptions.ByLines,
+        stockInfoText:enumerateSubstringsInRange_options_usingBlock (textRange, NsString.Enumeration.ByLines,
                    function (lineString)
                        local lineTokens = lineString:componentsSeparatedByString(',')
                        

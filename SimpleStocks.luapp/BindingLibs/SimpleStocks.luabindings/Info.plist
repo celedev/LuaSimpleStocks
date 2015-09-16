@@ -7,17 +7,24 @@
 	<key>CFBundleName</key>
 	<string>SimpleStocks</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>CIMLuaBindingsDeploymentTarget</key>
 	<string>6.1</string>
 	<key>CIMLuaBindingsFormatVersion</key>
 	<string>1.0</string>
 	<key>CIMLuaBindingsGenerationDate</key>
-	<date>2015-05-22T12:52:33Z</date>
+	<date>2015-09-16T10:21:40Z</date>
 	<key>CIMLuaBindingsGenerationOptions</key>
-	<dict/>
+	<dict>
+		<key>CIMLibrariesCompilationFlags</key>
+		<array>
+			<string>-fembed-bitcode</string>
+		</array>
+	</dict>
 	<key>CIMLuaBindingsGeneratorSDK</key>
-	<string>iphoneos8.3</string>
+	<string>iphoneos9.0</string>
+	<key>CIMLuaBindingsGeneratorSDKBuildVersion</key>
+	<string>13A340</string>
 	<key>CIMLuaBindingsGeneratorVersion</key>
 	<string>Celedev Lua2CBindingsGenerator 1.0</string>
 	<key>CIMLuaBindingsHasGlobalVariable</key>

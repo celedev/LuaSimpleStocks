@@ -14,10 +14,10 @@ Points of interest of this sample app include:
 
 ## Configuration required
 
-A Mac with Celedev CodeFlow version 0.9.15 or later.  
+A Mac with Celedev CodeFlow version 0.9.18 or later.  
 You can download CodeFlow from <https://www.celedev.com/en/support/#downloads> (registration required).
 
-Works on iPhone or iPad, running iOS 6 or later.
+Works on iPhone or iPad, running iOS 7 or later.
 
 ## How to use this code sample
 
@@ -45,7 +45,7 @@ Works on iPhone or iPad, running iOS 6 or later.
   **Most probable cause**: if you are using Xcode 5 (and thus iOS 7.1 SDK), these errors occur because the sample app is configured for the iOS 8 SDK.
 
   **⇒ Fix**: In the CodeFlow project, use the bindings library for the iOS 7.1 SDK in replacement of the one for the iOS 8 SDK
-	- Download [CodeFlow bindings for iOS 7.1 SDK](https://www.celedev.com/en/support/downloads/codeflow-bindings-ios7-1-sdk.dmg), and double-click on the .luabindings library file to install it in codeFlow; 
+	- Download [CodeFlow bindings for iOS 7.1 SDK](https://www.celedev.com/en/support/#downloads), and double-click on the .luabindings library file to install it in codeFlow; 
 	- If needed, select the iOS 7.1 SDK library in CodeFlow project (menu `Program -> Select SDK Library -> iOS 7.1 SDK` or using the contextual menu on the current iOS External Lib);
 	- CodeFlow will then update the associated Xcode project so that it links with the iOS 7.1 SDK bindings libraries.
 

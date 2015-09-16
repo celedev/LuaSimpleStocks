@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>LibId</key>
-			<string>apple_sdk_iphoneos8.3</string>
+			<string>apple_sdk_iphoneos9.0</string>
 			<key>LibName</key>
 			<string>iOS</string>
 		</dict>
@@ -14,7 +14,11 @@
 			<key>BindingsLibSourceGroupType</key>
 			<string>SelfGeneratedBindingsLib</string>
 			<key>CustomBindingsLibBindingsSourcePath</key>
-			<string>/Volumes/Brume/Celedev CodeFlow/CodeFlow Sample Applications/Simple Stocks/SimpleStocks.xcodeproj</string>
+			<string>SimpleStocks.xcodeproj</string>
+			<key>CustomBindingsLibCompilationOptions</key>
+			<array>
+				<string>-fembed-bitcode</string>
+			</array>
 			<key>CustomBindingsLibHeadersParsingOptions</key>
 			<array>
 				<string>-include</string>
@@ -26,7 +30,9 @@
 				<string>$(USER_LIBRARY_DIR)/Application\ Support/com.celedev.CodeFlow/headers</string>
 			</array>
 			<key>CustomBindingsLibLastGenerationDate</key>
-			<date>2015-05-22T12:52:33Z</date>
+			<date>2015-09-16T10:21:40Z</date>
+			<key>CustomBindingsLibPlatformSdkName</key>
+			<string>iphoneos9.0</string>
 			<key>CustomBindingsLibSourceFilesTree</key>
 			<data>
 			YnBsaXN0MDDUAQIDBAUGVldYJHZlcnNpb25YJG9iamVjdHNZJGFy
@@ -64,57 +70,10 @@
 				<key>targetType</key>
 				<string>com.apple.product-type.application</string>
 			</dict>
-			<key>LibBookmark</key>
-			<data>
-			Ym9va+wEAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAA3AMAAAQAAAADAwAAAAIAAAUAAAABAQAAVXNlcnMA
-			AAAIAAAAAQEAAGplYW4tbHVjBwAAAAEBAABMaWJyYXJ5AAYAAAAB
-			AQAAQ2FjaGVzAAAUAAAAAQEAAGNvbS5jZWxlZGV2LkNvZGVGbG93
-			CAAAAAEBAABQcm9ncmFtcyQAAAABAQAARUYzRjgzM0MtMjQwRS00
-			MTBFLTlGQzctRTc1QzMzRTQzRkIwDAAAAAEBAABFeHRlcm5hbExp
-			YnMZAAAAAQEAAFNpbXBsZVN0b2NrczEubHVhYmluZGluZ3MAAAAk
-			AAAAAQYAABAAAAAgAAAAMAAAAEAAAABQAAAAbAAAAHwAAACoAAAA
-			vAAAAAgAAAAEAwAAfGQCAAAAAAAIAAAABAMAAMN7TgAAAAAACAAA
-			AAQDAAA4fE4AAAAAAAgAAAAEAwAAbnxOAAAAAAAIAAAABAMAAPFP
-			kAEAAAAACAAAAAQDAAAw3ZABAAAAAAgAAAAEAwAA6NKRAQAAAAAI
-			AAAABAMAAOnSkQEAAAAACAAAAAQDAAD30pEBAAAAACQAAAABBgAA
-			DAEAABwBAAAsAQAAPAEAAEwBAABcAQAAbAEAAHwBAACMAQAACAAA
-			AAAEAABBuw9UvAAAABgAAAABAgAAAgAAAAAAAAAPAAAAAAAAAAAA
-			AAAAAAAACAAAAAQDAAAHAAAAAAAAAAQAAAADAwAA9wEAAAgAAAAB
-			CQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAEAwAA
-			AABGpwMBAAAIAAAAAAQAAEG4Iv/AAAAAJAAAAAEBAAAxQkIzNEI4
-			QS03RjU5LTNDMjktOUJBOS0yMTNBRTg0OTM4NkUYAAAAAQIAAIEA
-			AAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAAB
-			BQAAGQEAAAECAAAyNWE0N2MxNmJkNzA4MDUyNjg4NzY4ZjdhYTk3
-			NTMzNTA2YjVjOGZiOzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAwMDAw
-			MDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJlYWQtd3Jp
-			dGU7MDAwMDAwMDE7MDEwMDAwMDg7MDAwMDAwMDAwMTkxZDJmNzsv
-			dXNlcnMvamVhbi1sdWMvbGlicmFyeS9jYWNoZXMvY29tLmNlbGVk
-			ZXYuY29kZWZsb3cvcHJvZ3JhbXMvZWYzZjgzM2MtMjQwZS00MTBl
-			LTlmYzctZTc1YzMzZTQzZmIwL2V4dGVybmFsbGlicy9zaW1wbGVz
-			dG9ja3MxLmx1YWJpbmRpbmdzAAAAANgAAAD+////AQAAAAAAAAAR
-			AAAABBAAAOAAAAAAAAAABRAAAJwBAAAAAAAAEBAAANgBAAAAAAAA
-			QBAAAMgBAAAAAAAAAiAAAKQCAAAAAAAABSAAABQCAAAAAAAAECAA
-			ACQCAAAAAAAAESAAAFgCAAAAAAAAEiAAADgCAAAAAAAAEyAAAEgC
-			AAAAAAAAICAAAIQCAAAAAAAAMCAAALACAAAAAAAAAcAAAPgBAAAA
-			AAAAEcAAACAAAAAAAAAAEsAAAAgCAAAAAAAAENAAAAQAAAAAAAAA
-			gPAAALgCAAAAAAAA
-			</data>
-			<key>LibName</key>
-			<string>SimpleStocks</string>
-			<key>LibUrl</key>
-			<string>file:///Users/jean-luc/Library/Caches/com.celedev.CodeFlow/Programs/EF3F833C-240E-410E-9FC7-E75C33E43FB0/ExternalLibs/SimpleStocks1.luabindings</string>
 		</dict>
 	</array>
 	<key>Program Display Info</key>
 	<dict>
-		<key>LuaAppDocument remote Lua service</key>
-		<array>
-			<string>SimpleStocks - Context (Celedev's iPad)</string>
-			<string>SimpleStocks - Context (iPad de Jean-Luc)</string>
-			<string>SimpleStocks - Context (iPhone de Jean-Luc)</string>
-			<string>SimpleStocks - Context (Astérie)</string>
-		</array>
 		<key>LuaAppDocument-associatedXodeProject</key>
 		<dict>
 			<key>project</key>
@@ -129,7 +88,7 @@
 		<key>LuaAppWindow edited source path</key>
 		<string>StockViewController</string>
 		<key>LuaAppWindow frame</key>
-		<string>872 285 1429 759 0 0 2560 1417 </string>
+		<string>577 592 1429 759 0 0 2560 1417 </string>
 	</dict>
 	<key>Program Format Version</key>
 	<string>0.9</string>
@@ -192,10 +151,6 @@
 		<dict>
 			<key>Source File Auto Reload</key>
 			<true/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>SimpleStockView</string>
 			<key>SourceItemChangeTime</key>
 			<real>453989184.04620898</real>
 			<key>SourceItemDisplayInfo</key>
@@ -205,19 +160,15 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>10934</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1700</integer>
+				<integer>1183</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>15398</integer>
+				<integer>14785</integer>
 			</dict>
 		</dict>
 		<key>StockTradeInfo</key>
 		<dict>
 			<key>Source File Auto Reload</key>
 			<true/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>StockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
 			<real>446115056.02730501</real>
 			<key>SourceItemDisplayInfo</key>
@@ -236,10 +187,6 @@
 		<dict>
 			<key>Source File Auto Reload</key>
 			<true/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>StockViewController</string>
 			<key>SourceItemChangeTime</key>
 			<real>453989613.48136097</real>
 			<key>SourceItemDisplayInfo</key>
@@ -249,19 +196,15 @@
 				<key>SrcEditor Selected Location</key>
 				<integer>1403</integer>
 				<key>SrcEditor Visible Length</key>
-				<integer>1442</integer>
+				<integer>1404</integer>
 				<key>SrcEditor Visible Location</key>
-				<integer>516</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>YahooStockTradeInfo</key>
 		<dict>
 			<key>Source File Auto Reload</key>
 			<true/>
-			<key>Source File Is Start Item</key>
-			<false/>
-			<key>Source File Name</key>
-			<string>YahooStockTradeInfo</string>
 			<key>SourceItemChangeTime</key>
 			<real>453990321.18000799</real>
 			<key>SourceItemDisplayInfo</key>

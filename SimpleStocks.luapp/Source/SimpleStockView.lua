@@ -176,7 +176,7 @@ local function drawRadialGradient (gradient, size, center)
     local ctx = UiGraphics.GetCurrentContext()
     local startRadius = 0.0
     local endRadius = 0.85 * (size.width^2 + size.height^2)^0.5 / 2
-    CgContext.DrawRadialGradient(ctx, gradient, center, startRadius, center, endRadius, CgGradient.DrawsAfterEndLocation)
+    CgContext.DrawRadialGradient(ctx, gradient, center, startRadius, center, endRadius, CgGradient.Draws.AfterEndLocation)
 end
 
 local function underPriceDataPatternImage (patternSize)
@@ -350,10 +350,10 @@ function SimpleStockView:drawMonthNamesTextUnderVolumeRect(volumeRect, monthName
     if monthAverageWidth > 5 * monthNamesHeight then
         monthNameFontSize = monthNamesHeight * 0.8
     else
-        monthNameFontSize = monthAverageWidth / 5
+        monthNameFontSize = monthAverageWidth / 6
         
-        if monthNameFontSize < 12 then
-            monthNameFontSize = 12
+        if monthNameFontSize < 10 then
+            monthNameFontSize = 10
             monthNameRotationAngle = -pi / 12
         end
     end
@@ -441,7 +441,7 @@ function SimpleStockView:drawRect (rect)
     -- Prices Graph and background
     local patternCellSize = math.min (bounds.size.width, bounds.size.height) / artPatternCellsHCount
     -- self:drawArtPatternUnderPriceData (pricesRect, patternCellSize)
-    self:drawImageUnderPriceData (pricesRect, 'Background-image')
+    -- self:drawImageUnderPriceData (pricesRect, 'Background-image')
     self:drawLinePatterUnderPriceData (pricesRect, true)
     self:drawPriceDataInRect (pricesRect)
     
